@@ -1,50 +1,64 @@
 {
   "personal": {
-    "name": "Fritz Gayas",
-    "title": "Software Developer • Data-Driven Portfolio",
-    "bio": "I build modern web experiences with responsive, scalable architecture and clean content management.",
-    "email": "hello@fritzgayas.dev"
+    "name": "QA Engineer",
+    "title": "Test Automation Specialist",
+    "bio": "Delivering reliable software through automation, regression coverage, and continuous testing best practices.",
+    "email": "hello@example.com"
   },
   "about": {
-    "description": "I design and deliver digital products using HTML, CSS, JavaScript, and structured JSON content. My work focuses on responsive interfaces, maintainable code, and scalable portfolio architecture.",
+    "description": "I help product teams reduce risk and ship quality faster by building test automation pipelines, improving test coverage, and applying measurable QA processes.",
     "details": [
-      "3+ years building modern websites and web apps",
-      "Experience with responsive design and scalable content structures",
-      "Strong focus on reuse, accessibility, and performance"
+      "Experience with functional, regression, and integration testing",
+      "Test automation frameworks for web, API, and mobile applications",
+      "Strong focus on process, observability, and release confidence"
     ]
   },
+  "methodology": [
+    {
+      "title": "Risk-Based Testing",
+      "description": "Focus on the highest-value tests that protect the most critical paths in production and reduce release risk."
+    },
+    {
+      "title": "Automation-First Workflow",
+      "description": "Create and maintain automated regression, smoke, and API tests that catch issues early in development."
+    },
+    {
+      "title": "Continuous Quality Feedback",
+      "description": "Tie test results into CI/CD pipelines and track quality metrics each sprint to keep delivery stable."
+    }
+  ],
   "skills": {
-    "Front-End": ["HTML", "CSS", "JavaScript", "Responsive Design"],
-    "Back-End": ["Node.js", "REST APIs", "Data Modeling"],
-    "Tools": ["Git", "GitHub Pages", "VS Code"]
+    "Test Automation": ["Selenium", "Playwright", "Cypress", "TestNG", "JUnit"],
+    "Quality Engineering": ["Test Strategy", "Regression Testing", "API Testing", "Performance Validation"],
+    "Tools & Platforms": ["GitHub Actions", "Jenkins", "Postman", "JIRA", "Docker"]
   },
   "projects": [
     {
-      "id": "portfolio-site",
-      "title": "Data-Driven Portfolio",
-      "description": "A portfolio website that loads content from structured JSON for easy updates and scaling.",
-      "technologies": ["HTML", "CSS", "JavaScript"],
-      "metrics": ["Responsive design", "JSON-powered content", "Optimized layout"],
+      "id": "automation-framework",
+      "title": "Automation Framework",
+      "description": "Built a scalable test automation framework for web and API validation that reduced manual regression effort.",
+      "technologies": ["Playwright", "REST Assured", "Node.js"],
+      "metrics": ["80+ automated regression tests", "30% faster release validation", "CI pipeline integration"],
       "links": {
-        "github": "https://github.com/fritzgayas/professional-portfolio",
+        "github": "https://github.com/your-qa-repo",
         "demo": "#projects"
       }
     },
     {
-      "id": "dashboard-ui",
-      "title": "Modern Dashboard UI",
-      "description": "A dashboard-style interface for presenting skills, projects, and quick contact actions.",
-      "technologies": ["CSS Grid", "Reusable components", "Adaptive design"],
-      "metrics": ["Mobile-first", "Easy updates", "Performance-friendly"],
+      "id": "api-test-suite",
+      "title": "API Test Suite",
+      "description": "Automated contract and integration tests for backend APIs to support reliable deployments.",
+      "technologies": ["Postman", "Newman", "GitHub Actions"],
+      "metrics": ["API coverage increased by 45%", "Automated nightly execution"],
       "links": {
-        "github": "https://github.com/fritzgayas",
+        "github": "https://github.com/your-qa-repo",
         "demo": "#projects"
       }
     }
   ],
   "social_links": {
-    "github": "https://github.com/fritzgayas",
-    "linkedin": "https://linkedin.com/in/fritzgayas",
-    "email": "mailto:hello@fritzgayas.dev"
+    "github": "https://github.com/",
+    "linkedin": "https://linkedin.com/",
+    "email": "mailto:hello@example.com"
   }
 }

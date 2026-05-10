@@ -1,10 +1,12 @@
 const navToggle = document.getElementById('nav-toggle');
 const navMenu = document.getElementById('nav-menu');
+const navLinks = document.querySelectorAll('.nav a');
 const heroName = document.getElementById('hero-name');
 const heroTitle = document.getElementById('hero-title');
 const heroBio = document.getElementById('hero-bio');
 const aboutDescription = document.getElementById('about-description');
 const aboutList = document.getElementById('about-list');
+const methodologyGrid = document.getElementById('methodology-grid');
 const skillsGrid = document.getElementById('skills-grid');
 const projectsGrid = document.getElementById('projects-grid');
 const contactEmail = document.getElementById('contact-email');
@@ -12,57 +14,81 @@ const socialLinks = document.getElementById('social-links');
 
 const fallbackData = {
   personal: {
-    name: 'Fritz Gayas',
-    title: 'Software Developer • Data-Driven Portfolio',
-    bio: 'I build modern web experiences with responsive, scalable architecture and clean content management.',
-    email: 'hello@fritzgayas.dev'
+    name: 'QA Engineer',
+    title: 'Test Automation Specialist',
+    bio: 'Delivering reliable software through automation, regression coverage, and continuous testing best practices.',
+    email: 'hello@example.com'
   },
   about: {
-    description: 'I design and deliver digital products using HTML, CSS, JavaScript, and structured JSON content. My work focuses on responsive interfaces, maintainable code, and scalable portfolio architecture.',
+    description: 'I help product teams reduce risk and ship quality faster by building test automation pipelines, improving test coverage, and applying measurable QA processes.',
     details: [
-      '3+ years building modern websites and web apps',
-      'Experience with responsive design and scalable content structures',
-      'Strong focus on reuse, accessibility, and performance'
+      'Experience with functional, regression, and integration testing',
+      'Test automation frameworks for web, API, and mobile applications',
+      'Strong focus on process, observability, and release confidence'
     ]
   },
+  methodology: [
+    {
+      title: 'Risk-Based Testing',
+      description: 'Focus on the highest-value tests that protect the most critical paths in production and reduce release risk.'
+    },
+    {
+      title: 'Automation-First Workflow',
+      description: 'Use automated regression, smoke, and API tests to catch issues early and accelerate delivery cycles.'
+    },
+    {
+      title: 'Continuous Quality Feedback',
+      description: 'Integrate test results with CI/CD pipelines and monitor quality metrics from sprint to sprint.'
+    }
+  ],
   skills: {
-    'Front-End': ['HTML', 'CSS', 'JavaScript', 'Responsive Design'],
-    'Back-End': ['Node.js', 'REST APIs', 'Data Modeling'],
-    'Tools': ['Git', 'GitHub Pages', 'VS Code']
+    'Test Automation': ['Selenium', 'Playwright', 'Cypress', 'TestNG', 'JUnit'],
+    'Quality Engineering': ['Test Strategy', 'Regression Testing', 'API Testing', 'Performance Validation'],
+    'Tools & Platforms': ['GitHub Actions', 'Jenkins', 'Postman', 'JIRA', 'Docker']
   },
   projects: [
     {
-      id: 'portfolio-site',
-      title: 'Data-Driven Portfolio',
-      description: 'A project portfolio that loads content from structured JSON for easy updates and scaling.',
-      technologies: ['HTML', 'CSS', 'JavaScript'],
-      metrics: ['Responsive design', 'JSON-powered content', 'Optimized layout'],
+      id: 'automation-framework',
+      title: 'Automation Framework',
+      description: 'Built a scalable test automation framework for web and API validation to reduce manual regression effort.',
+      technologies: ['Playwright', 'REST Assured', 'Node.js'],
+      metrics: ['80+ automated regression tests', '30% faster release validation', 'CI pipeline integration'],
       links: {
-        github: 'https://github.com/fritzgayas/professional-portfolio',
+        github: 'https://github.com/your-qa-repo',
         demo: '#projects'
       }
     },
     {
-      id: 'project-dashboard',
-      title: 'Project Dashboard',
-      description: 'Dashboard-style layout for tracking portfolio projects, skills, and contact details in a clean UI.',
-      technologies: ['CSS Grid', 'Reusable components', 'Adaptive design'],
-      metrics: ['Mobile-first', 'Easy updates', 'Performance-friendly'],
+      id: 'api-test-suite',
+      title: 'API Test Suite',
+      description: 'Automated contract and integration tests for backend APIs, enabling reliable deployment pipelines.',
+      technologies: ['Postman', 'Newman', 'GitHub Actions'],
+      metrics: ['API coverage increased by 45%', 'Automated nightly execution'],
       links: {
-        github: 'https://github.com/fritzgayas',
+        github: 'https://github.com/your-qa-repo',
         demo: '#projects'
       }
     }
   ],
   social_links: {
-    github: 'https://github.com/fritzgayas',
-    linkedin: 'https://linkedin.com/in/fritzgayas',
-    email: 'mailto:hello@fritzgayas.dev'
+    github: 'https://github.com/',
+    linkedin: 'https://linkedin.com/',
+    email: 'mailto:hello@example.com'
   }
 };
 
 navToggle.addEventListener('click', () => {
   navMenu.classList.toggle('open');
+  navToggle.setAttribute('aria-expanded', navMenu.classList.contains('open'));
+});
+
+navLinks.forEach((link) => {
+  link.addEventListener('click', () => {
+    if (navMenu.classList.contains('open')) {
+      navMenu.classList.remove('open');
+      navToggle.setAttribute('aria-expanded', 'false');
+    }
+  });
 });
 
 async function loadData() {
@@ -94,6 +120,19 @@ function populateAbout(about) {
     item.className = 'about-list-item';
     item.textContent = detail;
     aboutList.appendChild(item);
+  });
+}
+
+function populateMethodology(methodology) {
+  methodologyGrid.innerHTML = '';
+  methodology.forEach((step) => {
+    const card = document.createElement('article');
+    card.className = 'methodology-card';
+    card.innerHTML = `
+      <h3>${step.title}</h3>
+      <p>${step.description}</p>
+    `;
+    methodologyGrid.appendChild(card);
   });
 }
 
@@ -160,6 +199,7 @@ async function initialize() {
   const portfolioData = await loadData();
   populateHero(portfolioData.personal);
   populateAbout(portfolioData.about);
+  populateMethodology(portfolioData.methodology);
   populateSkills(portfolioData.skills);
   populateProjects(portfolioData.projects);
   populateFooter(portfolioData.social_links);

@@ -14,10 +14,10 @@ If you have not initialized the repository yet, run these commands from the proj
 ```bash
 echo "# professional-portfolio" >> README.md
 git init
-ngit add .
+git add .
 git commit -m "Initial portfolio site"
 git branch -M main
-ngit remote add origin https://github.com/fritzgayas/professional-portfolio.git
+git remote add origin https://github.com/fritzgayas/professional-portfolio.git
 git push -u origin main
 ```
 
@@ -38,6 +38,16 @@ python -m http.server 8000
 ```
 
 Then open `http://localhost:8000` in your browser.
+
+## Customize the portfolio
+
+Edit `data/portfolio-data.json` to update:
+- `personal` for name, title, bio, and email
+- `about.details` for strengths and QA experience
+- `methodology` for your QA process and testing approach
+- `skills` with automation tools, frameworks, and quality practices
+- `projects` with your real QA and automation work
+- `social_links` for GitHub, LinkedIn, and email
 
 ## Deploying to GitHub Pages
 
