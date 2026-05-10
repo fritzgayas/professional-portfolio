@@ -1,0 +1,50 @@
+{
+  "personal": {
+    "name": "Fritz Gayas",
+    "title": "Software Developer • Data-Driven Portfolio",
+    "bio": "I build modern web experiences with responsive, scalable architecture and clean content management.",
+    "email": "hello@fritzgayas.dev"
+  },
+  "about": {
+    "description": "I design and deliver digital products using HTML, CSS, JavaScript, and structured JSON content. My work focuses on responsive interfaces, maintainable code, and scalable portfolio architecture.",
+    "details": [
+      "3+ years building modern websites and web apps",
+      "Experience with responsive design and scalable content structures",
+      "Strong focus on reuse, accessibility, and performance"
+    ]
+  },
+  "skills": {
+    "Front-End": ["HTML", "CSS", "JavaScript", "Responsive Design"],
+    "Back-End": ["Node.js", "REST APIs", "Data Modeling"],
+    "Tools": ["Git", "GitHub Pages", "VS Code"]
+  },
+  "projects": [
+    {
+      "id": "portfolio-site",
+      "title": "Data-Driven Portfolio",
+      "description": "A portfolio website that loads content from structured JSON for easy updates and scaling.",
+      "technologies": ["HTML", "CSS", "JavaScript"],
+      "metrics": ["Responsive design", "JSON-powered content", "Optimized layout"],
+      "links": {
+        "github": "https://github.com/fritzgayas/professional-portfolio",
+        "demo": "#projects"
+      }
+    },
+    {
+      "id": "dashboard-ui",
+      "title": "Modern Dashboard UI",
+      "description": "A dashboard-style interface for presenting skills, projects, and quick contact actions.",
+      "technologies": ["CSS Grid", "Reusable components", "Adaptive design"],
+      "metrics": ["Mobile-first", "Easy updates", "Performance-friendly"],
+      "links": {
+        "github": "https://github.com/fritzgayas",
+        "demo": "#projects"
+      }
+    }
+  ],
+  "social_links": {
+    "github": "https://github.com/fritzgayas",
+    "linkedin": "https://linkedin.com/in/fritzgayas",
+    "email": "mailto:hello@fritzgayas.dev"
+  }
+}

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fritz Gayas | Professional Portfolio</title>
+  <meta name="description" content="Professional portfolio website built with JSON-driven content and responsive design.">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="responsive.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="#home" class="brand">Fritz Gayas</a>
+      <nav class="nav" id="nav-menu">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section id="home" class="hero">
+      <div class="container hero-content">
+        <p class="hero-subtitle">Hi, I'm</p>
+        <h1 id="hero-name">Fritz Gayas</h1>
+        <p id="hero-title" class="hero-title">Professional Software Developer</p>
+        <p id="hero-bio" class="hero-copy">I build modern web experiences with responsive, scalable architecture backed by clean data.</p>
+        <div class="hero-actions">
+          <a href="#projects" class="button">View Projects</a>
+          <a href="#contact" class="button button-secondary">Let's Talk</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="about section">
+      <div class="container section-header">
+        <span class="section-tag">About</span>
+        <h2>About Me</h2>
+      </div>
+      <div class="container about-grid">
+        <div class="about-copy">
+          <p id="about-description">A results-driven developer with experience building responsive websites, scalable portfolio experiences, and efficient data-driven workflows.</p>
+          <div class="about-list" id="about-list"></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills" class="skills section">
+      <div class="container section-header">
+        <span class="section-tag">Skills</span>
+        <h2>Core Skills</h2>
+      </div>
+      <div class="container skills-grid" id="skills-grid"></div>
+    </section>
+
+    <section id="projects" class="projects section">
+      <div class="container section-header">
+        <span class="section-tag">Projects</span>
+        <h2>Featured Work</h2>
+      </div>
+      <div class="container projects-grid" id="projects-grid"></div>
+    </section>
+
+    <section id="contact" class="contact section">
+      <div class="container section-header">
+        <span class="section-tag">Contact</span>
+        <h2>Let's collaborate</h2>
+      </div>
+      <div class="container contact-grid">
+        <p class="contact-copy">Ready to start a new project or want to connect? Send me a message and I will reply quickly.</p>
+        <a id="contact-email" class="button button-secondary" href="mailto:hello@example.com">Email Me</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <p>Built with scalable JSON-driven content.</p>
+      <div class="social-links" id="social-links"></div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
